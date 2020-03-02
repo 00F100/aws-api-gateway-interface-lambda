@@ -1,0 +1,21 @@
+{
+  "name": "@00f100/aws-api-gateway-interface-lambda",
+  "version": "1.0.0",
+  "description": "Interface of AWS API Gateway for Lambda",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tslint --fix src/**/*.ts --project tsconfig.json --config tslint.json",
+    "prebuild": "npm run lint && rm -rf dist",
+    "build": "tsc --sourceMap false",
+    "start": "npm install --unsafe-perm=true && npm run build"
+  },
+  "author": "Joao Moraes <joaomoraesbr@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "10.x",
+    "ts-node": "8.6.2",
+    "tslint": "6.0.0",
+    "typescript": "3.7.5"
+  }
+}
