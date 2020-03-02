@@ -1,6 +1,6 @@
 {
   "name": "aws-api-gateway-interface-lambda",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interface of AWS API Gateway for Lambda",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",

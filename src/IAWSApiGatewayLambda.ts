@@ -3,32 +3,17 @@ export interface IAWSApiGatewayLambda {
   resource: string;
   path: string;
   httpMethod: string;
-  headers: Headers;
-  multiValueHeaders: MultiHeaders;
-  queryStringParameters: QueryString;
-  multiValueQueryStringParameters: MultiQueryString;
-  requestContext: RequestContext;
-  pathParameters: PathParameters;
-  stageVariables: any;
-  body: any;
-  isBase64Encoded: boolean;
+  headers?: Headers;
+  multiValueHeaders?: MultiHeaders;
+  queryStringParameters?: QueryString;
+  multiValueQueryStringParameters?: MultiQueryString;
+  requestContext?: RequestContext;
+  pathParameters?: PathParameters;
+  stageVariables?: any;
+  body?: string;
+  isBase64Encoded?: boolean;
 }
 
-export interface Headers {
-  [name: string]: string;
-}
-
-export interface MultiHeaders {
-  [name: string]: string[];
-}
-
-export interface QueryString {
-  [name: string]: string;
-}
-
-export interface MultiQueryString {
-  [name: string]: string[];
-}
 
 export interface RequestContext {
   accountId: string;
@@ -63,7 +48,26 @@ export interface RequestIdentity {
   userAgent: string;
   userArn: string;
 }
-
-export interface PathParameters {
+export interface DefaultObjectSingleValue {
   [name: string]: string;
+}
+
+export interface DefaultObjectMultiValue {
+  [name: string]: string[];
+}
+
+export interface Headers extends DefaultObjectSingleValue {
+}
+
+export interface QueryString extends DefaultObjectSingleValue {
+}
+
+export interface MultiHeaders extends DefaultObjectMultiValue {
+}
+
+
+export interface MultiQueryString extends DefaultObjectMultiValue {
+}
+
+export interface PathParameters extends DefaultObjectSingleValue {
 }
