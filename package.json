@@ -1,5 +1,5 @@
 {
-  "name": "@00f100/aws-api-gateway-interface-lambda",
+  "name": "aws-api-gateway-interface-lambda",
   "version": "1.0.0",
   "description": "Interface of AWS API Gateway for Lambda",
   "types": "dist/index.d.ts",
