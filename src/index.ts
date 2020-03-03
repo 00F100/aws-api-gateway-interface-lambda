@@ -27,7 +27,7 @@ export interface RequestContext {
   protocol: string;
   requestId: string;
   requestTime: string;
-  requestTimeEpoch: string;
+  requestTimeEpoch: number;
   resourceId: any;
   resourcePath: string;
   stage: string;
