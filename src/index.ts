@@ -13,7 +13,6 @@ export interface Request {
   body?: string | null;
   isBase64Encoded?: boolean | null;
 }
-
 export interface RequestContext {
   accountId: string;
   apiId: string;
@@ -32,47 +31,37 @@ export interface RequestContext {
   resourcePath: string;
   stage: string;
 }
-
 export interface RequestIdentity {
-  accessKey: string;
-  accountId: string;
+  accessKey: string | null;
+  accountId: string | null;
   caller: any;
   cognitoAuthenticationProvider: any;
-  cognitoAuthenticationType: string;
-  cognitoIdentityId: string;
-  cognitoIdentityPoolId: string;
-  principalOrgId: string;
-  sourceIp: string;
+  cognitoAuthenticationType: string | null;
+  cognitoIdentityId: string | null;
+  cognitoIdentityPoolId: string | null;
+  principalOrgId: string | null;
+  sourceIp: string | null;
   user: any;
-  userAgent: string;
-  userArn: string;
+  userAgent: string | null;
+  userArn: string | null;
 }
-
 export interface Response {
   statusCode: number;
   body: string;
 }
-
 export interface DefaultObjectSingleValue {
   [name: string]: string;
 }
-
 export interface DefaultObjectMultiValue {
   [name: string]: string[];
 }
-
 export interface Headers extends DefaultObjectSingleValue {
 }
-
 export interface QueryString extends DefaultObjectSingleValue {
 }
-
 export interface MultiHeaders extends DefaultObjectMultiValue {
 }
-
-
 export interface MultiQueryString extends DefaultObjectMultiValue {
 }
-
 export interface PathParameters extends DefaultObjectSingleValue {
 }
