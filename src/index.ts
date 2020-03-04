@@ -3,15 +3,15 @@ export interface Request {
   resource: string;
   path: string;
   httpMethod: string;
-  headers?: Headers;
-  multiValueHeaders?: MultiHeaders;
-  queryStringParameters?: QueryString;
-  multiValueQueryStringParameters?: MultiQueryString;
-  requestContext?: RequestContext;
-  pathParameters?: PathParameters;
-  stageVariables?: any;
-  body?: string;
-  isBase64Encoded?: boolean;
+  headers?: Headers | null;
+  multiValueHeaders?: MultiHeaders | null;
+  queryStringParameters?: QueryString | null;
+  multiValueQueryStringParameters?: MultiQueryString | null;
+  requestContext?: RequestContext | null;
+  pathParameters?: PathParameters | null;
+  stageVariables?: any | null;
+  body?: string | null;
+  isBase64Encoded?: boolean | null;
 }
 
 export interface RequestContext {
